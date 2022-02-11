@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import Screen from "../components/Screen";
-import ListItem from "../components/ListItem";
-import ListItemSeperator from "../components/ListItemSeperator";
-import ListItemDeleteAction from "../components/ListItemDeleteAction";
+import ListItem from "../components/lists/ListItem";
+import ListItemSeperator from "../components/lists/ListItemSeperator";
+import ListItemDeleteAction from "../components/lists/ListItemDeleteAction";
 
 const initialMessages = [
   {

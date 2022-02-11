@@ -3,7 +3,7 @@ import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
-import colors from "../config/colors";
+import colors from "../../config/colors";
 
 export default function ListItemDeleteAction({ onPress }) {
   return (
