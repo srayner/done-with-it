@@ -1,14 +1,10 @@
-import { StyleSheet } from "react-native";
 import React from "react";
+import { StyleSheet } from "react-native";
 import * as Yup from "yup";
 
 import Screen from "../components/Screen";
-import {
-  AppForm,
-  AppFormField,
-  AppFormPicker,
-  SubmitButton,
-} from "../components/forms";
+import { Form, FormField, FormPicker, SubmitButton } from "../components/forms";
+import CategoryPickerItem from "../components/CategoryPickerItem";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -18,16 +14,15 @@ const validationSchema = Yup.object().shape({
 });
 
 const categories = [
-  { label: "Clothing", value: 1 },
-  { label: "Cameras", value: 2 },
-  { label: "Furniture", value: 3 },
-  { label: "Garden", value: 4 },
+  { label: "Clothing", value: 1, backgroundColor: "red", icon: "apps" },
+  { label: "Cameras", value: 2, backgroundColor: "green", icon: "email" },
+  { label: "Furniture", value: 3, backgroundColor: "blue", icon: "lock" },
 ];
 
 export default function ListingEditScreen() {
   return (
     <Screen style={styles.container}>
-      <AppForm
+      <Form
         initialValues={{
           title: "",
           price: "",
@@ -37,19 +32,23 @@ export default function ListingEditScreen() {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        <AppFormField maxLength={255} name="title" placeholder="Title" />
-        <AppFormField
+        <FormField maxLength={255} name="title" placeholder="Title" />
+        <FormField
           maxLength={8}
           name="price"
           keyboardType="numeric"
           placeholder="Price"
+          width={120}
         />
-        <AppFormPicker
+        <FormPicker
           items={categories}
+          PickerItemComponent={CategoryPickerItem}
           name="category"
+          numberOfColumns={3}
           placeholder="Category"
+          width="50%"
         />
-        <AppFormField
+        <FormField
           autoCorrect={false}
           multiline
           name="Description"
@@ -57,7 +56,7 @@ export default function ListingEditScreen() {
           placeholder="Description"
         />
         <SubmitButton title="Post" />
-      </AppForm>
+      </Form>
     </Screen>
   );
 }

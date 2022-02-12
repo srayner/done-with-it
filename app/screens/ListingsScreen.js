@@ -1,5 +1,5 @@
-import { FlatList, StyleSheet } from "react-native";
 import React from "react";
+import { FlatList, StyleSheet } from "react-native";
 
 import Card from "../components/Card";
 import Screen from "../components/Screen";

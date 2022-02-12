@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, ImageComponent, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 
 import Icon from "../components/Icon";
 import ListItem from "../components/lists/ListItem";

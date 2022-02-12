@@ -1,7 +1,8 @@
-import { View, StyleSheet } from "react-native";
 import React from "react";
+import { View, StyleSheet } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import AppText from "./AppText";
+
+import Text from "./Text";
 import colors from "../config/colors";
 
 export default function MenuItem({ icon, color = colors.medium, caption }) {
@@ -10,7 +11,7 @@ export default function MenuItem({ icon, color = colors.medium, caption }) {
       <View style={[styles.iconContainer, { backgroundColor: color }]}>
         <MaterialCommunityIcons size={25} color={colors.white} name={icon} />
       </View>
-      <AppText style={styles.caption}>{caption}</AppText>
+      <Text style={styles.caption}>{caption}</Text>
     </View>
   );
 }

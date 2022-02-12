@@ -1,9 +1,9 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
 import colors from "../config/colors";
 
-function AppButton({ title, onPress, color = "primary" }) {
+export default function Button({ title, onPress, color = "primary" }) {
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -31,5 +31,3 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
 });
-
-export default AppButton;

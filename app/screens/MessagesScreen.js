@@ -1,5 +1,5 @@
-import { FlatList, View } from "react-native";
 import React, { useState } from "react";
+import { FlatList } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import Screen from "../components/Screen";
@@ -10,14 +10,15 @@ import ListItemDeleteAction from "../components/lists/ListItemDeleteAction";
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title: "Mosh Hamedami",
+    description: "Hey! Is this item still available?",
     image: require("../assets/mosh.jpg"),
   },
   {
     id: 2,
-    title: "T2",
-    description: "D2",
+    title: "Mosh Hamedami",
+    description:
+      "I'm interested in this item. When will you be able to post it?",
     image: require("../assets/mosh.jpg"),
   },
 ];

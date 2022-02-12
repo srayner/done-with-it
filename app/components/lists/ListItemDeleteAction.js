@@ -1,5 +1,5 @@
-import { View, StyleSheet, Text } from "react-native";
 import React from "react";
+import { View, StyleSheet, Text } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 

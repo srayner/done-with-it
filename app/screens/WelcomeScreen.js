@@ -1,9 +1,9 @@
 import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 
-import AppButton from "../components/AppButton";
+import Button from "../components/Button";
 
-function WelcomeScreen(props) {
+export default function WelcomeScreen(props) {
   return (
     <ImageBackground
       style={styles.background}
@@ -14,8 +14,8 @@ function WelcomeScreen(props) {
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <AppButton title="Login" color="primary" />
-        <AppButton title="Register" color="secondary" />
+        <Button title="Login" color="primary" />
+        <Button title="Register" color="secondary" />
       </View>
     </ImageBackground>
   );
@@ -46,5 +46,3 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
 });
-
-export default WelcomeScreen;
